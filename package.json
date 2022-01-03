@@ -5,6 +5,6 @@
     "stop": "docker compose -f docker-compose.yml down --rmi all -v",
     "restart": "npm run stop && npm run start",
     "build": "cd app && npm run build",
-    "prod": "docker-compose -f docker-compose.prod.yml up -d"
+    "prod": "docker compose -f docker compose.prod.yml up -d"
   }
 }
