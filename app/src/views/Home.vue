@@ -9,7 +9,7 @@
       <h2>What is this place?</h2>
       <p>This is my website. It contains my Curriculum Vitae, a contact form and some personal projects.</p>
       <p>It is a place where I can try new things related to servers, programming and networking. Feel free to look around, or maybe hack the database. Enjoy!</p>
-      <p>Click here to view my <a :href="item.url" v-text="item.text" @click.prevent="download(item)"></a>.</p>
+      <p>Click here to view my <a href="/CV.pdf" v-text="item.text" @click.prevent="download(item)"></a>.</p>
     </div>
   </main>
 </template>
@@ -28,7 +28,7 @@ export default {
     return {
       tasks: [],
       item: {
-        url: "http://localhost:5000/CV.pdf",
+        url: `http://${window.location.hostname}:5000/CV.pdf`,
         text: "Curriculum Vitae"
       }
     }

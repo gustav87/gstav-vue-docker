@@ -36,7 +36,7 @@ export default {
   methods: {
     async getDogs() {
       try {
-        const location = window.location.hostname;
+        const location = window.location.hostname
         const response = await fetch(`http://${location}:5000/backend/flickr/getDogs`)
         if (response.status === 200) {
           const data = await response.json()
@@ -55,7 +55,7 @@ export default {
     },
     async getTaggedImages() {
       try {
-        const location = window.location.hostname;
+        const location = window.location.hostname
         const response = await fetch(`http://${location}:5000/backend/flickr/getTaggedImages?tag=${this.tag}`)
         if (response.status === 200) {
           const data = await response.json()
