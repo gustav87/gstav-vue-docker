@@ -1,0 +1,4 @@
+FROM node:current-alpine
+WORKDIR /app/dist
+RUN npm install -g http-server
+CMD npx http-server
