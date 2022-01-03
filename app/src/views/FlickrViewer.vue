@@ -36,8 +36,7 @@ export default {
   methods: {
     async getDogs() {
       try {
-        const location = window.location.hostname
-        const response = await fetch(`http://${location}:5000/backend/flickr/getDogs`)
+        const response = await fetch(`${window.location.protocol}//${window.location.hostname}:5000/backend/flickr/getDogs`)
         if (response.status === 200) {
           const data = await response.json()
           this.dogs = data.photos.photo
@@ -55,8 +54,7 @@ export default {
     },
     async getTaggedImages() {
       try {
-        const location = window.location.hostname
-        const response = await fetch(`http://${location}:5000/backend/flickr/getTaggedImages?tag=${this.tag}`)
+        const response = await fetch(`${window.location.protocol}//${window.location.hostname}:5000/backend/flickr/getTaggedImages?tag=${this.tag}`)
         if (response.status === 200) {
           const data = await response.json()
           this.taggedImages = data.photos.photo

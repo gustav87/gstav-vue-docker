@@ -28,7 +28,7 @@ export default {
     return {
       tasks: [],
       item: {
-        url: `http://${window.location.hostname}:5000/CV.pdf`,
+        url: `${window.location.protocol}//${window.location.hostname}:5000/CV.pdf`,
         text: "Curriculum Vitae"
       }
     }

@@ -48,14 +48,13 @@ export default {
   },
   methods: {
     async submitInsertRowForm() {
-      const location = window.location.hostname
       const requestOptions = {
         method: 'POST',
         headers: {Accept: 'application/json', 'Content-Type': 'application/json'},
         body: JSON.stringify({name: this.name, email: this.email})
       }
       try {
-        fetch(`http://${location}:5000/backend/databasics/insertRow`, requestOptions)
+        fetch(`${window.location.protocol}//${window.location.hostname}:5000/backend/databasics/insertRow`, requestOptions)
           .then(response => response.text())
           .then(res => {
             console.log(res)
@@ -65,9 +64,8 @@ export default {
       }    
     },
     submitSearchDbForm() {
-      const location = window.location.hostname
       const queryString = this.filter ? `?filter=${this.filter}` : ''
-      fetch(`http://${location}:5000/backend/databasics/getDocuments${queryString}`)
+      fetch(`${window.location.protocol}//${window.location.hostname}:5000/backend/databasics/getDocuments${queryString}`)
         .then(response => response.json())
         .then(res => {
           this.showTable = true

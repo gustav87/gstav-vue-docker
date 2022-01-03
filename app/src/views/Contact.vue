@@ -62,9 +62,8 @@ export default {
   methods: {
     async submitForm() {
       try {
-        const location = window.location.hostname;
         const queryParams = `name=${this.name}&email=${this.email}&topic=${this.topic}&message=${this.message}`
-        const response = await fetch(`http://${location}:5000/backend/contact?${queryParams}`)
+        const response = await fetch(`${window.location.protocol}//${window.location.hostname}:5000/backend/contact?${queryParams}`)
         if (response.status === 200) {
           this.displayForm = 'none'
           this.headerTextAlign = 'center'
