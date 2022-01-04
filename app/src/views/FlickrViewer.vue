@@ -1,6 +1,6 @@
 <template>
   <main id="flickrViewerPage">
-    <p>Use the flickr API.</p>
+    <p>Use the flickr API</p>
     <label for="flickrTag">Input image tag</label>
     <input type="text" v-model="tag" name="flickrTag" id="flickrTag" v-on:keyup.enter="getTaggedImages">
     <br>

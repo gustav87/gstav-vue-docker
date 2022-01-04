@@ -3,11 +3,11 @@
     <header>
         <h1><router-link to="/">gstav</router-link></h1>
 		</header>
-    <div class="bigWrapper">
+    <div class="container">
 			<Nav/>
 			<router-view></router-view>
-    	<footer>Gustav Andersson 2016</footer>
 		</div>
+		<footer>Gustav Andersson 2016</footer>
   </div>
 </template>
 
@@ -74,17 +74,18 @@ footer {
 	height: 30px;
 	width: 100%;
 	position: fixed;
-	bottom: 0;}
+	bottom: 0;
+}
 
 header {
-	border-bottom: 2px solid black;
 	text-align:center;
-	box-sizing: border-box;
-	cursor: default;}
+	cursor: default;
+}
 
 header h1 {
 	font-size: 2em;
-	padding-top: 5px;}
+	padding-top: 5px;
+}
 
 header h1 a {
 	text-decoration: none;
@@ -94,7 +95,8 @@ header h1 a {
 header span {
 	font-family: 'Roboto';
 	font-size: 0.36em;
-	display: none;}
+	display: none;
+}
 
 main h2 {
 	font-size: 2.2em;
@@ -110,10 +112,6 @@ p {
 
 ul, li {
 	list-style: none;
-}
-
-.active {
-	background: darksalmon
 }
 
 main {

@@ -90,18 +90,10 @@ p {
 }
 
 input[type=text], select, textarea{
-	width: 75%;
 	padding: 5px 8px;
 	border: 2px solid #ccc;
 	border-radius: 4px;
 	background: #f8f8f8;
-	font-size: 14px;
-}
-
-@media (min-width: 620px) {
-	input[type=text], select, textarea {
-		width: 50%;
-	}
 }
 
 #header {
