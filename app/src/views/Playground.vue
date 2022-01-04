@@ -1,5 +1,5 @@
 <template>
-  <main id="playgroundPage">
+  <main>
     <SideNav :sideNavItems="sideNavItems"/>
     <div class="display box"><p>Playgroundpage</p></div>
   </main>
@@ -54,6 +54,9 @@ export default {
 </script>
 
 <style scoped>
+main {
+  display: flex;
+}
 .display {
 	width: 100%;
 	margin-left: 10px;

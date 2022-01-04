@@ -1,7 +1,7 @@
 <template>
   <div class="pageWrapper">
     <header>
-        <h1><a href='/'>Gustav Andersson</a></h1>
+        <h1><router-link to="/">Gustav Andersson</router-link></h1>
 		</header>
     <div class="bigWrapper">
 			<Nav/>
@@ -40,15 +40,28 @@ export default {
 </script>
 
 <style>
-::selection {background: #54aa47;}
-html, body, main, header, nav, footer, ul, ol, div, h1, h2, h3, h4, h5, h6 {margin: 0; padding:0;}
-h1, h2, h3, h4, h5, h6 {font-family: 'Alex Brush', Helvetica, sans-serif; font-weight: 400;}
+::selection {
+	background: #54aa47;
+}
+
+html, body, main, header, nav, footer, ul, ol, div, h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding:0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Alex Brush', Helvetica, sans-serif;
+	font-weight: 400;
+}
+
 body {
 	font-family: 'Roboto', sans-serif;
 	background: linear-gradient(290deg, rgba(148,187,233,0.8813726174063375) 11%, rgba(174,238,181,0.9009804605435925) 100%);
 /*	background: linear-gradient(90deg, #DAD299 10%, #B0DAB9 90%); OR linear-gradient(0deg, #61677B, #CA728F);
 	background: linear-gradient(60deg, #DAD299, #B0DAB9);*/
-	min-width: 320px; }
+	min-width: 320px;
+}
+
 footer {
 	display: flex;
 	flex-direction: column;
@@ -60,42 +73,50 @@ footer {
 	width: 100%;
 	position: fixed;
 	bottom: 0;}
+
 header {
 	height: 65px;
 	border-bottom: 2px solid black;
 	text-align:center;
 	box-sizing: border-box;
 	cursor: default;}
+
 header h1 {
 	font-size: 2.9em;
 	padding-top: 5px;}
+
 header h1 a {
 	text-decoration: none;
 	color: black;
 }
+
 header span {
 	font-family: 'Roboto';
 	font-size: 0.36em;
 	display: none;}
 
-main h2 {font-size: 2.15em;}
-main p {font-size: 1.1em;}
-
-#blogPage, #playgroundPage {
-	display: flex;
-
+main h2 {
+	font-size: 2.15em;
 }
+
+main p {
+	font-size: 1.1em;
+}
+
 p {
 	margin-top: 0;
 }
+
 ul, li {
 	list-style: none;
 }
 
-.active {background: darksalmon}
+.active {
+	background: darksalmon
+}
 
 main {
-  max-width: 1000px;
+  max-width: 90%;
 	min-height: 200px;
 	clear: both;
 	border: 2px solid darksalmon;
@@ -125,14 +146,21 @@ main {
 	}
 }
 
-/*blueTable design start*/
-.blueTable {border-collapse: collapse; width: 50%; margin-top:15px;}
-.blueTable .firstRow td {padding-top: 15px;}
-.blueTable td {padding: 8px; border: 1px solid blue; vertical-align: top;}
-.stars {
-	text-align: center;
+.blueTable {
+	border-collapse: collapse;
+	width: 50%;
+	margin-top:15px;
 }
-/*blueTable design end*/
+
+.blueTable .firstRow td {
+	padding-top: 15px;
+}
+
+.blueTable td {
+	padding: 8px;
+	border: 1px solid blue;
+	vertical-align: top;
+}
 
 .box {
 	padding: 10px;

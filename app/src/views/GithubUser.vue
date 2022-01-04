@@ -94,5 +94,11 @@ export default {
 	justify-content: space-between;
 }
 
-img {width: 200px;}
+img {
+  width: 200px;
+}
+
+.stars {
+	text-align: center;
+}
 </style>

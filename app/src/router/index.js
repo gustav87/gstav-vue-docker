@@ -11,6 +11,7 @@ import FlickrViewer from '../views/FlickrViewer.vue'
 import VueStuff from '../views/VueStuff.vue'
 import DbStuff from '../views/DbStuff.vue'
 import JsStuff from '../views/JsStuff.vue'
+import NotFound from '../views/NotFound.vue'
 
 const routes = [
   {
@@ -72,6 +73,11 @@ const routes = [
     path: '/playground/jsStuff',
     name: 'JsStuff',
     component: JsStuff
+  },
+  {
+    path: '/:catchAll(.*)',
+    name: 'NotFound',
+    component: NotFound
   }
 ]
 

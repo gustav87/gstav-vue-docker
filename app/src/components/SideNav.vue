@@ -17,7 +17,7 @@ export default {
 
 <style scoped>
 div {
-	width: 500px;
+	width: 320px;
   font-size: 1.5em;
 }
 div ul li {

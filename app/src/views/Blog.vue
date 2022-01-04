@@ -1,5 +1,5 @@
 <template>
-  <main id="blogPage">
+  <main>
     <SideNav :sideNavItems="sideNavItems" />
     <div class="display box"><p>Blogpage</p></div>
   </main>
@@ -31,6 +31,9 @@ export default {
 </script>
 
 <style scoped>
+main {
+  display: flex;
+}
 .display {
 	width: 100%;
 	margin-left: 10px;

@@ -1,5 +1,5 @@
 <template>
-  <main id="contactPage" class="content">
+  <main class="content">
     <div class="box">
       <p id="header" :style="{textAlign: headerTextAlign}">{{headerText}}</p>
 
@@ -80,6 +80,9 @@ export default {
 </script>
 
 <style scoped>
+main {
+  width: 1000px;
+}
 p {
 	margin: 1em 0 0.4em;
 	padding-left: 2px;

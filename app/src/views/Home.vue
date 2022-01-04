@@ -51,3 +51,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+main {
+  width: 1000px;
+}
+</style>
