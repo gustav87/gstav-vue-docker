@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <i class="fa fa-bars" id="menuButton" aria-hidden="true"><a href="#"></a></i>
+    <i class="fa fa-bars" @click="hello" id="menuButton" aria-hidden="true"><a href="#"></a></i>
     <ul>
       <li class="navButton"><router-link to="/">Home</router-link></li><!--
     --><li class="navButton"><router-link to="/blog">Blog</router-link></li><!--
@@ -20,7 +20,12 @@ export default {
     }
   },
   components: {
-  }
+  },
+	methods: {
+		hello() {
+			console.log("hey")
+		}
+	}
 }
 </script>
 
@@ -44,10 +49,19 @@ nav ul li a {
 	text-decoration: none;
 	color: black;
 }
-#menuButton {display: block; float: right; font-size: 2.5em; margin-right: 5px; cursor: pointer;}
-.navButton {transition: all 0.5s ease;}
-.navButton:hover {background:darksalmon;}
-
+#menuButton {
+	display: block;
+	float: right;
+	font-size: 2.5em;
+	margin-right: 5px;
+	cursor: pointer;
+}
+.navButton {
+	transition: all 0.5s ease;
+}
+.navButton:hover {
+	background:darksalmon;
+}
 .navButton > a {
 	transition-property: color;
 	transition-duration: 1s;
@@ -58,9 +72,15 @@ nav ul li a {
 }
 
 @media (min-width: 620px) {
-	#menuButton {display: none;}
-	nav ul {display: block;}
-	nav ul li {display: inline-block;}
+	#menuButton {
+		display: none;
+	}
+	nav ul {
+		display: block;
+	}
+	nav ul li {
+		display: inline-block;
+	}
 	nav ul li a {
 		display: inline-block;
 		width: 120px;

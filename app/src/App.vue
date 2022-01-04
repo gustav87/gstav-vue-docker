@@ -1,7 +1,7 @@
 <template>
   <div class="pageWrapper">
     <header>
-        <h1><router-link to="/">Gustav Andersson</router-link></h1>
+        <h1><router-link to="/">gstav</router-link></h1>
 		</header>
     <div class="bigWrapper">
 			<Nav/>
@@ -40,6 +40,8 @@ export default {
 </script>
 
 <style>
+@import "./util/font-awesome-4.7.0/css/font-awesome.min.css";
+
 ::selection {
 	background: #54aa47;
 }
@@ -75,19 +77,18 @@ footer {
 	bottom: 0;}
 
 header {
-	height: 65px;
 	border-bottom: 2px solid black;
 	text-align:center;
 	box-sizing: border-box;
 	cursor: default;}
 
 header h1 {
-	font-size: 2.9em;
+	font-size: 2em;
 	padding-top: 5px;}
 
 header h1 a {
 	text-decoration: none;
-	color: black;
+	color: purple;
 }
 
 header span {
@@ -96,11 +97,11 @@ header span {
 	display: none;}
 
 main h2 {
-	font-size: 2.15em;
+	font-size: 2.2em;
 }
 
 main p {
-	font-size: 1.1em;
+	font-size: 1.2em;
 }
 
 p {
@@ -124,24 +125,13 @@ main {
 }
 
 @media (min-width: 1020px) {
-	header {
-		height: 120px;
-	}
 	header h1 {
-		font-size: 6em;
+		font-size: 3em;
 	}
 }
 @media (min-width: 620px) {
 	header span {
 		display: inline;
-	}
-}
-@media (min-width: 500px) {
-	main p {
-		font-size: 1.2em;
-	}
-	main h2 {
-		font-size: 3em;
 	}
 }
 
