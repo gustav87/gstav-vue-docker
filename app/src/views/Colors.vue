@@ -83,8 +83,9 @@ export default {
 </script>
 
 <style scoped>
-main {color: white;}
-main .whiteBoxes {color: black;}
+main {
+  color: white;
+}
 main > div {
 	display: flex;
 	justify-content: stretch;
@@ -99,8 +100,17 @@ main > div {
 	margin: 10px;
 }
 
-.whiteBoxes {background: white;}
-#red {background: red;}
-#green {background: green;}
-#blue {background: blue;}
+.whiteBoxes {
+  background: white;
+  color: black;
+}
+#red {
+  background: red;
+}
+#green {
+  background: green;
+}
+#blue {
+  background: blue;
+}
 </style>

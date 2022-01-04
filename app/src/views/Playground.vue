@@ -1,7 +1,9 @@
 <template>
-  <main>
+  <main id="playgroundPage">
     <SideNav :sideNavItems="sideNavItems"/>
-    <div class="display box"><p>Playgroundpage</p></div>
+    <div class="display box">
+      <router-view></router-view>
+    </div>
   </main>
 </template>
 
@@ -54,8 +56,9 @@ export default {
 </script>
 
 <style scoped>
-main {
+#playgroundPage {
   display: flex;
+  border: 2px solid darksalmon;
 }
 .display {
 	width: 100%;

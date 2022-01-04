@@ -119,7 +119,6 @@ main {
   max-width: 90%;
 	min-height: 200px;
 	clear: both;
-	border: 2px solid darksalmon;
 	padding: 5px;
 	margin: 10px auto 40px;
 }
@@ -144,22 +143,6 @@ main {
 	main h2 {
 		font-size: 3em;
 	}
-}
-
-.blueTable {
-	border-collapse: collapse;
-	width: 50%;
-	margin-top:15px;
-}
-
-.blueTable .firstRow td {
-	padding-top: 15px;
-}
-
-.blueTable td {
-	padding: 8px;
-	border: 1px solid blue;
-	vertical-align: top;
 }
 
 .box {

@@ -1,11 +1,6 @@
 <template>
 <main class="content">
-	<div class="backNavigation">
-		<p><router-link to="/playground">Back to playground</router-link></p>
-	</div>
-	<div>
-		<p>Search for a username on GitHub and display their repositories!</p>
-	</div>
+  <p>Search for a username on GitHub and display their repositories!</p>
 	<form name="searchUser" @submit="search(username)">
 		<input type="search" placeholder="username to find" v-model="username" required>
 		<input type="submit" value="Search">

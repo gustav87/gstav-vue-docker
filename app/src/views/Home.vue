@@ -1,5 +1,5 @@
 <template>
-  <main id="indexPage">
+  <main>
     <div class="box">
       <h2>Who am I?</h2>
       <p>Hello, my name is Gustav and I'm a Linux afficionado from Helsingborg, Sweden, currently living in Stockholm.</p>
@@ -55,5 +55,6 @@ export default {
 <style scoped>
 main {
   width: 1000px;
+  border: 2px solid darksalmon;
 }
 </style>

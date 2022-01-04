@@ -27,7 +27,33 @@ const routes = [
   {
     path: '/playground',
     name: 'Playground',
-    component: Playground
+    component: Playground,
+    children: [
+      {
+        path: 'colors',
+        component: Colors
+      },
+      {
+        path: 'map',
+        component: Map
+      },
+      {
+        path: 'flickrViewer',
+        component: FlickrViewer
+      },
+      {
+        path: 'dbStuff',
+        component: DbStuff
+      },
+      {
+        path: 'githubSearch',
+        component: GithubSearch
+      },
+      {
+        path: 'githubUser/:username',
+        component: GithubUser
+      }
+    ]
   },
   {
     path: '/contact',
@@ -35,39 +61,9 @@ const routes = [
     component: Contact
   },
   {
-    path: '/playground/colors',
-    name: 'Colors',
-    component: Colors
-  },
-  {
-    path: '/playground/githubSearch',
-    name: 'GithubSearch',
-    component: GithubSearch
-  },
-  {
-    path: '/playground/githubUser/:username',
-    name: 'GithubUser',
-    component: GithubUser
-  },
-  {
-    path: '/playground/map',
-    name: 'Map',
-    component: Map
-  },
-  {
-    path: '/playground/flickrViewer',
-    name: 'FlickrViewer',
-    component: FlickrViewer
-  },
-  {
     path: '/playground/vueStuff',
     name: 'vueStuff',
     component: VueStuff
-  },
-  {
-    path: '/playground/dbStuff',
-    name: 'DbStuff',
-    component: DbStuff
   },
   {
     path: '/playground/jsStuff',

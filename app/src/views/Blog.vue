@@ -33,6 +33,7 @@ export default {
 <style scoped>
 main {
   display: flex;
+  border: 2px solid darksalmon;
 }
 .display {
 	width: 100%;

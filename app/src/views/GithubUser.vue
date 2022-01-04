@@ -1,11 +1,13 @@
 <template>
   <main class="content">
     <div class="flexContainer">
-      <div class="backButtons">
-        <p><router-link to="/playground">Back to playground</router-link></p>
-        <p><router-link to="/playground/githubSearch">Back to search</router-link></p>
+      <div>
+        <p>You searched for: {{username}}</p>
+        <p id="userDetails">Username: {{account.name}}</p>
+        <p>User location: {{account.location}}</p>	
+        <div><img id="img1" :src="account.avatar_url" :title="account.name"></div>
       </div>
-      <div class="githubInfo">
+      <div>
         <div>Choose sort order:</div>
         <select v-model="repoSortOrder" name="fishy">
           <option value="+stargazers_count">Stars, ascending</option>
@@ -15,24 +17,16 @@
           <option value="+language">Language, ascending</option>
           <option value="-language">Language, descending</option>
         </select>
-        <div><img id="img1" :src="account.avatar_url" :title="account.name"></div>
-        <p>You searched for: {{username}}</p>
-        <div id="userDetails">Username: {{account.name}}</div>
-        <div>User location: {{account.location}}</div>	
-      </div>
-      <div class="githubTable">
-        <table class="blueTable">
-          <thead><tr><th>Name</th><th>Stars</th><th>Language</th></tr></thead>
-          <tbody v-for="item in sortedRepos">
-            <tr>
-              <td>{{item.name}}</td>
-              <td class="stars">
-                {{item.stargazers_count}} 
-                <i class="fa fa-star-o fa-lg" aria-hidden="true"></i>
-              </td>
-              <td>{{item.language}}</td>
-            </tr>
-          </tbody>
+        <table>
+          <tr><th>Name</th><th>Stars</th><th>Language</th></tr>
+          <tr v-for="item in sortedRepos">
+            <td>{{item.name}}</td>
+            <td class="stars">
+              {{item.stargazers_count}} 
+              <i class="fa fa-star-o fa-lg" aria-hidden="true"></i>
+            </td>
+            <td>{{item.language}}</td>
+          </tr>
         </table>	
       </div>
     </div>
@@ -95,7 +89,18 @@ export default {
 }
 
 img {
-  width: 200px;
+  width: 300px;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+tr:nth-child(even) td {
+  background-color: #D6EEEE;
+}
+td, th {
+	padding: 8px;
 }
 
 .stars {
