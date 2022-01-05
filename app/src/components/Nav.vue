@@ -69,22 +69,4 @@ export default {
 	transition-duration: 0.5s;
 	transition-timing-function: ease-out;
 }
-
-/* @media (min-width: 620px) {
-	#menuButton {
-		display: none;
-	}
-	nav ul {
-		display: block;
-	}
-	nav ul li {
-		display: inline-block;
-	}
-	nav ul li a {
-		display: inline-block;
-		width: 120px;
-		padding: 10px 15px;
-	}
-}
-*/
 </style>

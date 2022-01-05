@@ -119,7 +119,7 @@ main {
 	min-height: 200px;
 	clear: both;
 	padding: 5px;
-	margin: 10px auto 40px;
+	margin: 0 auto 40px;
 }
 
 @media (min-width: 1020px) {
