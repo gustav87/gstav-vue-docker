@@ -17,10 +17,20 @@ export default {
 
 <style scoped>
 div {
-	width: 320px;
-  font-size: 1.5em;
+	width: 350px;
+  font-size: 1.3em;
 }
-div ul li {
-	padding: 10px 15px;
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  /* margin-top: 0.5rem;
+  margin-bottom: 0.5rem; */
+  padding: 0.5rem 0;
+  padding-left: 1rem;
+  margin: 0;
 }
 </style>

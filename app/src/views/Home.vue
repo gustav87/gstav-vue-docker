@@ -54,7 +54,6 @@ export default {
 
 <style scoped>
 main {
-  width: 1000px;
   border: 2px solid darksalmon;
 }
 </style>
