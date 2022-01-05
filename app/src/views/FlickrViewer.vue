@@ -29,7 +29,7 @@ export default {
     return {
       showDogs: false,
       showTaggedImages: false,
-      tag: null,
+      tag: '',
       err: null
     }
   },
