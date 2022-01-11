@@ -25,11 +25,11 @@ export default {
     }
   },
   mounted() {
-    let mapScript = document.createElement('script')
-    mapScript.async = true
-    mapScript.defer = true
-    mapScript.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDArSXIEl4x-YPh7iu_enHlm1AnPWyqGU4'
-    document.head.appendChild(mapScript)
+    // let mapScript = document.createElement('script')
+    // mapScript.async = true
+    // mapScript.defer = true
+    // mapScript.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDArSXIEl4x-YPh7iu_enHlm1AnPWyqGU4'
+    // document.head.appendChild(mapScript)
   },
   methods: {
     toggleAddTask() {
