@@ -1,26 +1,22 @@
 <template>
-	<nav class="navbar navbar-expand-lg navbar-light">
-		<div class="container-fluid">
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					<li class="nav-item" :class="{'color-nav': $route.path == '/'}">
-						<router-link class="nav-link" to="/">Home</router-link>
-					</li>
-					<li class="nav-item" :class="{'color-nav': $route.path == '/blog'}">
-						<router-link class="nav-link" to="/blog">Blog</router-link>
-					</li>
-					<li class="nav-item" :class="{'color-nav': $route.path == '/playground'}">
-						<router-link class="nav-link" to="/playground">Playground</router-link>
-					</li>
-					<li class="nav-item" :class="{'color-nav': $route.path == '/contact'}">
-						<router-link class="nav-link" to="/contact">Contact</router-link>
-					</li>
-				</ul>
-			</div>
-		</div>
+	<nav>
+		<button class="navTogglerButton" type="button">
+			<span class="navToggler"></span>
+		</button>
+		<ul class="navbar-nav">
+			<li class="nav-item" :class="{'color-nav': $route.path == '/'}">
+				<router-link class="nav-link" to="/">Home</router-link>
+			</li>
+			<li class="nav-item" :class="{'color-nav': $route.path == '/blog'}">
+				<router-link class="nav-link" to="/blog">Blog</router-link>
+			</li>
+			<li class="nav-item" :class="{'color-nav': $route.path == '/playground'}">
+				<router-link class="nav-link" to="/playground">Playground</router-link>
+			</li>
+			<li class="nav-item" :class="{'color-nav': $route.path == '/contact'}">
+				<router-link class="nav-link" to="/contact">Contact</router-link>
+			</li>
+		</ul>
 	</nav>
 </template>
 
@@ -41,44 +37,62 @@ export default {
 </script>
 
 <style scoped>
+nav {
+	margin: 5px 0;
+}
+.navToggler {
+	background-image: url("../util/img/hamburger.svg")
+}
 .active {
 	background: darksalmon
 }
 @media (min-width: 992px) {
-	.navbar-expand-lg .navbar-nav {
-			flex-grow: 1;
-			justify-content: center;
-	}
 }
 
 @media (min-width: 992px) {
-	.navbar-expand-lg .navbar-nav .nav-link {
-		padding-right: 20px;
-		padding-left: 20px;
+	.nav-link {
+		padding: 10px 20px;
 	}
+
+	.navbar-nav {
+		flex-grow: 1;
+		justify-content: center;
+		display: flex;
+	}
+
+	.navTogglerButton {
+		display: none;
+	}
+
+
 }
 
 .nav-item {
 	transition: all 0.5s ease;
 	font-size: 1.5rem;
+	list-style: none;
+	padding: 10px 0;
 }
-.nav-item:hover {
-	background:darksalmon;
-}
-.navbar-light .navbar-nav .nav-link:focus {
+.nav-link:focus {
 	color:black;
 }
-.navbar-light .navbar-nav .nav-link {
+.nav-link {
+		text-decoration: none;
     color: black;
 }
-.navbar-light .navbar-nav .nav-link:hover {
+.nav-link:hover {
 	color: white;
 	transition-property: color;
 	transition-duration: 0.5s;
 	transition-timing-function: ease-out;
 }
 
-.color-nav {
-	background: darksalmon;
+@media (min-width: 992px) {
+	.color-nav {
+		background: darksalmon;
+	}
+	.nav-item:hover {
+		background:darksalmon;
+	}
 }
 </style>

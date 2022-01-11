@@ -40,8 +40,6 @@ export default {
 </script>
 
 <style>
-@import "./util/font-awesome-4.7.0/css/font-awesome.min.css";
-
 ::selection {
 	background: #54aa47;
 }

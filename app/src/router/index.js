@@ -1,17 +1,19 @@
 import {createRouter, createWebHistory} from 'vue-router'
-import Home from '../views/Home.vue'
-import Blog from '../views/Blog.vue'
-import Playground from '../views/Playground.vue'
-import Contact from '../views/Contact.vue'
-import Colors from '../views/Colors.vue'
-import GithubSearch from '../views/GithubSearch.vue'
-import GithubUser from '../views/GithubUser.vue'
-import Map from '../views/Map.vue'
-import FlickrViewer from '../views/FlickrViewer.vue'
-import VueStuff from '../views/VueStuff.vue'
-import DbStuff from '../views/DbStuff.vue'
-import JsStuff from '../views/JsStuff.vue'
-import NotFound from '../views/NotFound.vue'
+
+// lazy loading the routes
+const Home = () => import('../views/Home.vue')
+const Blog = () => import('../views/Blog.vue')
+const Playground = () => import('../views/Playground.vue')
+const Contact = () => import('../views/Contact.vue')
+const Colors = () => import('../views/Colors.vue')
+const GithubSearch = () => import('../views/GithubSearch.vue')
+const GithubUser = () => import('../views/GithubUser.vue')
+const Map = () => import('../views/Map.vue')
+const VueStuff = () => import('../views/VueStuff.vue')
+const FlickrViewer = () => import('../views/FlickrViewer.vue')
+const DbStuff = () => import('../views/DbStuff.vue')
+const JsStuff = () => import('../views/JsStuff.vue')
+const NotFound = () => import('../views/NotFound.vue')
 
 const routes = [
   {
