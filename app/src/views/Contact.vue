@@ -88,7 +88,7 @@ label {
   display: block;
   margin: 1em 0 0.4em;
 	padding-left: 3px;
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 input, textarea, select {

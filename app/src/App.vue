@@ -57,11 +57,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
 	background: linear-gradient(290deg, rgba(148,187,233,0.8813726174063375) 11%, rgba(174,238,181,0.9009804605435925) 100%);
 /*	background: linear-gradient(90deg, #DAD299 10%, #B0DAB9 90%); OR linear-gradient(0deg, #61677B, #CA728F);
 	background: linear-gradient(60deg, #DAD299, #B0DAB9);*/
 	min-width: 320px;
+}
+
+#app {
+	font-family: 'Roboto', sans-serif;
 }
 
 footer {
@@ -83,7 +86,7 @@ header {
 }
 
 header h1 {
-	font-size: 2em;
+	font-size: 2rem;
 	padding-top: 5px;
 }
 
@@ -92,26 +95,12 @@ header h1 a {
 	color: purple;
 }
 
-header span {
-	font-family: 'Roboto';
-	font-size: 0.36em;
-	display: none;
-}
-
-main h2 {
-	font-size: 2.2em;
+header h1 a:hover {
+	color: purple;
 }
 
 main p {
-	font-size: 1.2em;
-}
-
-p {
-	margin-top: 0;
-}
-
-ul, li {
-	list-style: none;
+	font-size: 1.2rem;
 }
 
 main {
@@ -122,14 +111,9 @@ main {
 	margin: 0 auto 40px;
 }
 
-@media (min-width: 1020px) {
+@media (min-width: 992px) {
 	header h1 {
-		font-size: 3em;
-	}
-}
-@media (min-width: 620px) {
-	header span {
-		display: inline;
+		font-size: 3rem;
 	}
 }
 

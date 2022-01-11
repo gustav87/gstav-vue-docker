@@ -23,6 +23,7 @@ services:
     env_file: .env
     environment:
       PYTHONUNBUFFERED: 0
+    init: true
 
   db:
     container_name: cgstav-db

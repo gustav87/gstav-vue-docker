@@ -18,12 +18,16 @@ export default {
 <style scoped>
 div {
 	width: 350px;
-  font-size: 1.3em;
+  font-size: 1.4rem;
 }
 
 a {
   text-decoration: none;
   color: black;
+}
+
+a:hover {
+  color: #0a58ca;
 }
 
 ul {
@@ -32,5 +36,9 @@ ul {
   padding: 0.5rem 0;
   padding-left: 1rem;
   margin: 0;
+}
+
+li {
+	list-style: none;
 }
 </style>

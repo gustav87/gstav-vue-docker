@@ -6,16 +6,16 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					<li class="nav-item">
+					<li class="nav-item" :class="{'color-nav': $route.path == '/'}">
 						<router-link class="nav-link" to="/">Home</router-link>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item" :class="{'color-nav': $route.path == '/blog'}">
 						<router-link class="nav-link" to="/blog">Blog</router-link>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item" :class="{'color-nav': $route.path == '/playground'}">
 						<router-link class="nav-link" to="/playground">Playground</router-link>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item" :class="{'color-nav': $route.path == '/contact'}">
 						<router-link class="nav-link" to="/contact">Contact</router-link>
 					</li>
 				</ul>
@@ -51,14 +51,22 @@ export default {
 	}
 }
 
+@media (min-width: 992px) {
+	.navbar-expand-lg .navbar-nav .nav-link {
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+}
+
 .nav-item {
 	transition: all 0.5s ease;
-	font-size: 1.2em;
-	margin-left: 20px;
-	margin-right: 20px;
+	font-size: 1.5rem;
 }
 .nav-item:hover {
 	background:darksalmon;
+}
+.navbar-light .navbar-nav .nav-link:focus {
+	color:black;
 }
 .navbar-light .navbar-nav .nav-link {
     color: black;
@@ -68,5 +76,9 @@ export default {
 	transition-property: color;
 	transition-duration: 0.5s;
 	transition-timing-function: ease-out;
+}
+
+.color-nav {
+	background: darksalmon;
 }
 </style>
