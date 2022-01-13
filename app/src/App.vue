@@ -39,9 +39,16 @@ export default {
 }
 </script>
 
-<style>
-::selection {
-	background: #54aa47;
+<style lang="scss">
+$breakpoint-desktop: 992px;
+
+@mixin selection {
+    ::-moz-selection { @content; }
+    ::selection { @content; }
+}
+
+@include selection {
+    background: #54aa47;
 }
 
 html, body, main, header, nav, footer, ul, ol, div, h1, h2, h3, h4, h5, h6 {
@@ -81,24 +88,20 @@ footer {
 header {
 	text-align:center;
 	cursor: default;
-}
 
-header h1 {
-	font-size: 2rem;
-	padding-top: 5px;
-}
+	h1 {
+		font-size: 2rem;
+		padding-top: 5px;
 
-header h1 a {
-	text-decoration: none;
-	color: purple;
-}
+		a {
+			text-decoration: none;
+			color: purple;
 
-header h1 a:hover {
-	color: purple;
-}
-
-main p {
-	font-size: 1.2rem;
+			&:hover {
+				color: purple;
+			}
+		}
+	}
 }
 
 main {
@@ -107,9 +110,13 @@ main {
 	clear: both;
 	padding: 5px;
 	margin: 0 auto 40px;
+
+	p {
+		font-size: 1.2rem;
+	}
 }
 
-@media (min-width: 992px) {
+@media (min-width: $breakpoint-desktop) {
 	header h1 {
 		font-size: 3rem;
 	}
