@@ -3,3 +3,4 @@ __pycache__
 db/data
 app/dist
 node_modules
+.vscode
