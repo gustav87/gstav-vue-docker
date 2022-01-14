@@ -1,7 +1,7 @@
 <template>
   <div class="box">
     <ul v-for="item in sideNavItems">
-      <li><router-link :to="item.url">{{item.text}}</router-link></li>
+      <li><router-link :to="item.url" :class="{'color-nav': $route.path.includes(item.url)}">{{item.text}}</router-link></li>
     </ul>
   </div>
 </template>
@@ -24,6 +24,8 @@ div {
 a {
   text-decoration: none;
   color: black;
+  padding: 10px;
+  display: block;
 }
 
 a:hover {
@@ -31,14 +33,15 @@ a:hover {
 }
 
 ul {
-  /* margin-top: 0.5rem;
-  margin-bottom: 0.5rem; */
-  padding: 0.5rem 0;
   padding-left: 1rem;
   margin: 0;
 }
 
 li {
 	list-style: none;
+}
+
+.color-nav {
+  background: darksalmon;
 }
 </style>

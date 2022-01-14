@@ -7,10 +7,10 @@
 			<li class="nav-item" :class="{'color-nav': $route.path == '/'}">
 				<router-link class="nav-link" to="/">Home</router-link>
 			</li>
-			<li class="nav-item" :class="{'color-nav': $route.path == '/blog'}">
+			<li class="nav-item" :class="{'color-nav': $route.path.includes('/blog')}">
 				<router-link class="nav-link" to="/blog">Blog</router-link>
 			</li>
-			<li class="nav-item" :class="{'color-nav': $route.path == '/playground'}">
+			<li class="nav-item" :class="{'color-nav': $route.path.includes('/playground')}">
 				<router-link class="nav-link" to="/playground">Playground</router-link>
 			</li>
 			<li class="nav-item" :class="{'color-nav': $route.path == '/contact'}">
